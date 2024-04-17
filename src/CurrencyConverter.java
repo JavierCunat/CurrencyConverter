@@ -8,6 +8,8 @@
  *    Make sure you can import org.json.JSONObject and all other classes
  *    Make sure you are using exhangeratesapi.io access key: 3f1c60a4bf4f3f7b623600349838d197 (you can use mine)
  *
+ *
+ * Presented to class 4/17!
  */
 
 import org.json.JSONObject;
@@ -214,7 +216,7 @@ public class CurrencyConverter {
             //format the output message
             DecimalFormat toTwoDecimals = new DecimalFormat("00.00");
             String outputMessage = amount + " in currency type " + fromCode + " is = to " +
-                   toTwoDecimals.format(amount/exchangeRate) + " of the " + toCode + " currency";
+                   toTwoDecimals.format(amount * exchangeRate) + " of the " + toCode + " currency";
 
 
             //display the response in a message dialog
